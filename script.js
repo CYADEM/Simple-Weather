@@ -1,10 +1,7 @@
 let weather = {
-      "apikey": "a7aeb1e7ea4e19fa6d41014b5edf2d2b",
+      "apikey": "Put your license key here",
       fetchWeather: function (city) {
-            fetch("https://api.openweathermap.org/data/2.5/weather?q="
-                  + city
-                  + "&units=metric&appid="
-                  + this.apikey)
+            fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&appid=" + this.apikey)
                   .then((Response) => Response.json())
                   .then((data) => this.displayWeather(data));
       },
@@ -14,13 +11,13 @@ let weather = {
             try {
                   const { icon, description } = data.weather[0];
                   const { temp, humidity } = data.main;
-                  const { speed } = data.wind;
+                  const { wind } = data.wind;
                   document.getElementById('country').innerText = name;
                   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
                   document.getElementById('desc').innerText = description;
                   document.getElementById("temp").innerText = temp + "°C";
                   document.querySelector(".humidity span").innerText = humidity;
-                  document.querySelector(".wind span").innerText = speed;
+                  document.querySelector(".wind span").innerText = wind;
 
                   document.querySelector('.error').style.display = "none";
                   document.querySelector('.weather-info').style.display = "block";
