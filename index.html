@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>devTinchx | Simple Weather</title>
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <div class="weather-card">
+            <div class="search">
+                  <input type="text" placeholder="Search" id="search">
+                  <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <div class="error" style="display: none;">
+                  <p>We could not find that country.</p>
+                  <p>Please try changing name!</p>
+            </div>
+            <div class="weather-info" style="display: none;">
+                  <h1 id="country">Country</h1>
+                  <h2 id="temp">°C</h2>
+
+                  <div class="weather-desc">
+                        <img src="https://openweathermap.org/img/wn/02n.png" class="icon"></img>
+                        <p id="desc">Cloudy</p>
+                  </div>
+                  <p class="humidity">Humidity: <span>0</span>%</p>
+                  <p class="wind">Wind Speed: <span>0</span> km/h</p>
+            </div>
+      </div>
+      <script src="script.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

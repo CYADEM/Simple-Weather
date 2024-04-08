@@ -1,0 +1,78 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+}
+
+body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('background.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+}
+
+.weather-card {
+      padding: 30px 20px;
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.604);
+}
+
+.weather-card .search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0px;
+      padding: 5px 30px;
+}
+
+.weather-card .search input {
+      font-size: 15px;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 20px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.327);
+      outline: none;
+}
+
+.weather-card .search input::placeholder {
+      color: white;
+}
+
+.weather-card .search ion-icon {
+      font-size: 20px;
+      cursor: pointer;
+}
+
+.weather-info {
+      text-align: center;
+}
+
+.weather-info h1 {
+      margin-bottom: 20px;
+}
+
+.weather-info h2 {
+      font-size: 40px;
+}
+
+.weather-info .humidity,
+.weather-info .wind {
+      margin-bottom: 5px;
+      font-size: 18px;
+}
+
+.weather-desc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.error {
+      text-align: center;
+      font-size: 25px;
+}
